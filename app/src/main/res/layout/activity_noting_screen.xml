@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".noting_screen">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,16 +17,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btn_createnote"
+        <EditText
+            android:id="@+id/txtinp_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="createNoteClick"
-            android:text="ADD A NOTE" />
+            android:ems="10"
+            android:hint="TITLE: YOUR NOTE TITLE"
+            android:inputType="text" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recy_note"
+        <EditText
+            android:id="@+id/txtinp_notes"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="saveitClick"
+        android:text="SAVE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

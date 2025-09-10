@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.recyclerview)
     val room_version = "2.7.2"
 
     implementation("androidx.room:room-runtime:$room_version")
