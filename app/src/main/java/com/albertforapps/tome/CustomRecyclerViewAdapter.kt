@@ -61,10 +61,7 @@ class CustomRecyclerViewAdapter(private val list: MutableList<ToDo>): RecyclerVi
                 context.startActivity(vv)
 
             }
-//
-//            list.removeAt(position)
-//            notifyItemRemoved(position)
-//            notifyItemRangeChanged(position, list.size)
+
         }
     }
 
